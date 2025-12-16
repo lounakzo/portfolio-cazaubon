@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - Votre Nom</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <div>
+        <h1>Votre Nom</h1>
+        <h2>Frontend Developer • Web Developer</h2>
+        <p>Courte phrase de présentation pour expliquer qui vous êtes et ce que vous faites.</p>
+      </div>
+      <nav class="nav">
+        <a href="#about">À propos</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#experience">Expériences</a>
+        <a href="#testimonials">Témoignages</a>
+        <a href="#blog">Articles</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- A PROPOS -->
+    <section id="about" class="section">
+      <div class="container">
+        <h3>À propos</h3>
+        <p>
+          Résumé rapide de votre parcours dans le développement web, vos expertises et vos motivations.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h3>Projets</h3>
+
+        <div class="grid">
+          <article class="card">
+            <h4>Nom du projet 1</h4>
+            <p>Brève description du projet, son objectif et le problème qu’il résout.</p>
+            <p class="meta"><strong>Outils :</strong> HTML, CSS, JavaScript</p>
+            <div class="links">
+              <a href="#" target="_blank">Code (GitHub)</a>
+              <a href="#" target="_blank">Demo</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h4>Nom du projet 2</h4>
+            <p>Brève description du projet, son objectif et le problème qu’il résout.</p>
+            <p class="meta"><strong>Outils :</strong> React, Node.js</p>
+            <div class="links">
+              <a href="#" target="_blank">Code (GitHub)</a>
+              <a href="#" target="_blank">Demo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h3>Compétences</h3>
+        <div class="skills-grid">
+          <div>
+            <h4>Langages</h4>
+            <ul>
+              <li>HTML / CSS – Avancé</li>
+              <li>JavaScript – Intermédiaire</li>
+              <li>TypeScript – Intermédiaire</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Frameworks</h4>
+            <ul>
+              <li>React – Intermédiaire</li>
+              <li>Vue.js – Débutant</li>
+              <li>Node.js – Intermédiaire</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Outils</h4>
+            <ul>
+              <li>Git / GitHub – Avancé</li>
+              <li>Figma – Intermédiaire</li>
+              <li>VS Code – Avancé</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCES -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h3>Expériences</h3>
+
+        <div class="timeline-item">
+          <h4>Poste / Mission – Entreprise</h4>
+          <span class="timeline-date">2023 – 2024</span>
+          <ul>
+            <li>Responsabilité ou réalisation principale 1.</li>
+            <li>Responsabilité ou réalisation principale 2.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <h4>Poste / Mission – Entreprise</h4>
+          <span class="timeline-date">2021 – 2023</span>
+          <ul>
+            <li>Responsabilité ou réalisation principale 1.</li>
+            <li>Responsabilité ou réalisation principale 2.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEMOIGNAGES (OPTIONNEL) -->
+    <section id="testimonials" class="section section-alt">
+      <div class="container">
+        <h3>Témoignages</h3>
+        <div class="grid">
+          <article class="card">
+            <p>“Court témoignage d’un client ou collègue sur votre travail et vos compétences.”</p>
+            <p class="meta">Nom du client • Poste</p>
+          </article>
+          <article class="card">
+            <p>“Deuxième témoignage optionnel pour renforcer votre crédibilité.”</p>
+            <p class="meta">Nom du collègue • Poste</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLES / BLOG (OPTIONNEL) -->
+    <section id="blog" class="section">
+      <div class="container">
+        <h3>Articles & Blog</h3>
+        <div class="grid">
+          <article class="card">
+            <h4>Titre de l’article</h4>
+            <p>Court résumé de l’article, tutoriel ou retour d’expérience.</p>
+            <a href="#" class="link" target="_blank">Lire l’article</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h3>Contact</h3>
+        <p>N’hésitez pas à me contacter pour toute opportunité ou collaboration.</p>
+        <ul class="contact-list">
+          <li><strong>Email :</strong> votre.email@exemple.com</li>
+          <li><strong>LinkedIn :</strong> <a href="#" target="_blank">Votre LinkedIn</a></li>
+          <li><strong>GitHub :</strong> <a href="#" target="_blank">Votre GitHub</a></li>
+        </ul>
+        <!-- Formulaire simple optionnel -->
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Nom</label>
+            <input id="name" type="text" placeholder="Votre nom">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Votre email">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Votre message"></textarea>
+          </div>
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2025 Votre Nom. Tous droits réservés.</p>
+      <div class="footer-links">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
