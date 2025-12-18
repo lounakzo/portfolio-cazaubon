@@ -322,13 +322,50 @@ html, body {
 .bubble span {
   font-size: 0.95rem;
   color: var(--text-muted);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+/* Plain (non-link) bubble adjustments */
+.bubble.plain {
+  cursor: default;
+  pointer-events: none;
+}
+
+.bubble.plain span {
+  text-decoration: none;
+  text-decoration-color: transparent;
+  color: var(--text-muted);
+}
+
+/* allow an inner link inside a plain bubble to be clickable and styled like the span */
+.bubble.plain a,
+.bubble .bubble-link {
+  pointer-events: auto;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  color: var(--text-muted);
+}
+
+.bubble.plain a:hover,
+.bubble .bubble-link:hover {
+  color: #fff;
+  text-decoration-color: #fff;
 }
 
 .bubble:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.95);
-  background: linear-gradient(90deg, rgba(139, 92, 246, 0.95), rgba(236, 72, 153, 0.95));
+  background: rgba(129, 140, 248, 0.5);
   color: #fff;
+}
+
+.bubble:hover span {
+  text-decoration-color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -338,82 +375,6 @@ html, body {
   .bubble {
     width: 100%;
   }
-}
-
-/* Formulaire */
-
-.contact-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem 1.5rem;
-  background: rgba(15, 23, 42, 0.8);
-  border-radius: var(--radius-lg);
-  border: 1px solid rgba(129, 140, 248, 0.5);
-  padding: 1.5rem;
-}
-
-.contact-form .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.contact-form label {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-.contact-form input,
-.contact-form textarea {
-  background: rgba(15, 23, 42, 0.9);
-  border-radius: var(--radius-md);
-  border: 1px solid rgba(75, 85, 99, 0.9);
-  color: var(--text);
-  font-size: 0.9rem;
-  padding: 0.55rem 0.7rem;
-  outline: none;
-  transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 0 1px rgba(139, 92, 246, 0.5);
-  background: rgba(15, 23, 42, 1);
-}
-
-.contact-form textarea {
-  grid-column: 1 / -1;
-  resize: vertical;
-  min-height: 120px;
-}
-
-.contact-form button {
-  grid-column: 1 / -1;
-  justify-self: flex-start;
-  padding: 0.6rem 1.4rem;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #8b5cf6, #ec4899);
-  color: #fdf2ff;
-  box-shadow: 0 12px 30px rgba(236, 72, 153, 0.45);
-  transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
-}
-
-.contact-form button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 18px 45px rgba(236, 72, 153, 0.55);
-}
-
-.contact-form button:active {
-  transform: translateY(0);
-  box-shadow: 0 10px 24px rgba(236, 72, 153, 0.4);
-  opacity: 0.94;
 }
 
 /* Footer */
