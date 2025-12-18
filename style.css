@@ -307,7 +307,7 @@ html, body {
   border-radius: 14px;
   border: 1px solid rgba(129,140,248,0.35);
   text-decoration: none;
-  color: var(--text);
+  color: var(--text-muted);
   transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
   text-align: center;
 }
