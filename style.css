@@ -1,4 +1,5 @@
 /* Reset simple */
+
 *,
 *::before,
 *::after {
@@ -8,14 +9,15 @@
 }
 
 :root {
-  --bg: #070415;
-  --bg-alt: #100725;
-  --card-bg: #140a33;
-  --primary: #8b5cf6;   /* violet principal */
-  --primary-soft: #a855f7;
-  --text: #f9f5ff;
-  --text-muted: #c4b5fd;
-  --border: #312e81;
+
+  --bg: #020617;
+  --bg-alt: #02091b;
+  --card-bg: #020617;
+  --primary: #2563eb; /* bleu principal */
+  --primary-soft: #38bdf8;
+  --text: #e5f2ff;
+  --text-muted: #D6E8FE;
+  --border: #1d4ed8;
   --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.9);
   --radius-lg: 18px;
   --radius-md: 10px;
@@ -24,7 +26,7 @@
 }
 
 html, body {
-  background: radial-gradient(circle at top, #1d1140 0, #050014 55%, #000 100%);
+  background: radial-gradient(circle at top, #0b1120 0, #020617 55%, #000814 100%);
   color: var(--text);
   font-family: var(--font-main);
   line-height: 1.6;
@@ -45,7 +47,7 @@ html, body {
 }
 
 .section-alt {
-  background: rgba(15, 23, 42, 0.7);
+  background: rgba(15, 23, 42, 0.8);
   backdrop-filter: blur(14px);
 }
 
@@ -56,8 +58,8 @@ html, body {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(18px);
-  background: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(24, 0, 55, 0.95));
-  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.97), rgba(15, 23, 60, 0.97));
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
 }
 
 .header-content {
@@ -108,7 +110,7 @@ html, body {
 .nav a:hover {
   color: var(--text);
   border-color: var(--primary);
-  background: rgba(139, 92, 246, 0.08);
+  background: rgba(37, 99, 235, 0.12);
 }
 
 /* Titres de section */
@@ -139,9 +141,9 @@ html, body {
 }
 
 .card {
-  background: radial-gradient(circle at top, rgba(139, 92, 246, 0.13), rgba(15, 23, 42, 0.95));
+  background: radial-gradient(circle at top, rgba(37, 99, 235, 0.18), rgba(15, 23, 42, 0.98));
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(76, 81, 191, 0.7);
+  border: 1px solid rgba(37, 99, 235, 0.7);
   padding: 1.5rem;
   box-shadow: var(--shadow-soft);
   position: relative;
@@ -153,7 +155,7 @@ html, body {
   content: "";
   position: absolute;
   inset: -40%;
-  background: radial-gradient(circle at top, rgba(168, 85, 247, 0.12), transparent 60%);
+  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 60%);
   opacity: 0;
   transition: opacity var(--transition);
 }
@@ -161,7 +163,7 @@ html, body {
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 25px 55px rgba(15, 23, 42, 0.95);
-  border-color: rgba(196, 181, 253, 0.8);
+  border-color: rgba(191, 219, 254, 0.9);
 }
 
 .card:hover::after {
@@ -181,7 +183,7 @@ html, body {
 .card .meta {
   margin-top: 0.75rem;
   font-size: 0.8rem;
-  color: #e5e7eb;
+  color: var(--text-muted);
 }
 
 /* Liens */
@@ -201,16 +203,16 @@ html, body {
   color: var(--primary-soft);
   border-radius: 999px;
   padding: 0.35rem 0.9rem;
-  border: 1px solid rgba(129, 140, 248, 0.5);
-  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(37, 99, 235, 0.5);
+  background: rgba(15, 23, 42, 0.96);
   transition: var(--transition);
 }
 
 .links a:hover,
 .footer-links a:hover {
-  background: linear-gradient(90deg, rgba(139, 92, 246, 0.9), rgba(236, 72, 153, 0.9));
+  background: linear-gradient(90deg, rgba(37, 99, 235, 0.95), rgba(56, 189, 248, 0.95));
   border-color: transparent;
-  color: #fdf2ff;
+  color: #e0f2fe;
 }
 
 /* Compétences */
@@ -236,12 +238,18 @@ html, body {
   padding: 0.25rem 0;
 }
 
+/* Alternating section backgrounds: every even section inside <main> */
+main > section:nth-of-type(even) {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(14px);
+}
+
 /* Timeline expériences */
 
 .timeline-item {
   margin-bottom: 1.5rem;
   padding-left: 1.2rem;
-  border-left: 2px solid rgba(129, 140, 248, 0.5);
+  border-left: 2px solid rgba(37, 99, 235, 0.6);
   position: relative;
 }
 
@@ -288,6 +296,7 @@ html, body {
 }
 
 /* Contact - bulles */
+
 .contact-bubbles {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -303,9 +312,9 @@ html, body {
   justify-content: center;
   padding: 1.25rem 1rem;
   min-height: 120px;
-  background: linear-gradient(180deg, rgba(139,92,246,0.14), rgba(15,23,42,0.95));
+  background: linear-gradient(180deg, rgba(37, 99, 235, 0.18), rgba(15, 23, 42, 0.98));
   border-radius: 14px;
-  border: 1px solid rgba(129,140,248,0.35);
+  border: 1px solid rgba(37, 99, 235, 0.45);
   text-decoration: none;
   color: var(--text-muted);
   transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
@@ -327,7 +336,9 @@ html, body {
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
+
 /* Plain (non-link) bubble adjustments */
+
 .bubble.plain {
   cursor: default;
   pointer-events: none;
@@ -340,6 +351,7 @@ html, body {
 }
 
 /* allow an inner link inside a plain bubble to be clickable and styled like the span */
+
 .bubble.plain a,
 .bubble .bubble-link {
   pointer-events: auto;
@@ -360,7 +372,7 @@ html, body {
 .bubble:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 50px rgba(15, 23, 42, 0.95);
-  background: rgba(129, 140, 248, 0.5);
+  background: rgba(37, 99, 235, 0.2);
   color: #fff;
 }
 
@@ -372,6 +384,7 @@ html, body {
   .contact-bubbles {
     grid-template-columns: 1fr;
   }
+
   .bubble {
     width: 100%;
   }
@@ -380,8 +393,8 @@ html, body {
 /* Footer */
 
 .footer {
-  border-top: 1px solid rgba(148, 163, 184, 0.3);
-  background: radial-gradient(circle at top, rgba(76, 29, 149, 0.7), rgba(15, 23, 42, 0.98));
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  background: radial-gradient(circle at top, rgba(30, 64, 175, 0.8), rgba(15, 23, 42, 0.98));
   padding: 1.2rem 0;
   margin-top: 2rem;
 }
